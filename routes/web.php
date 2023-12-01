@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
+Route::post('/users', [UserController::class, 'store']);
+Route::get('/login', [UserController::class, 'index']);
+Route::post('/login-form', [UserController::class, 'login']);
+
+Route::get('/account', [UserController::class, 'account'])->name('account');
+Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
+
+
