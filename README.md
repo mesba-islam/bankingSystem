@@ -7,12 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-##installation
-composer install
-php artisan migrate:refresh
-php artisan db:seed
-
-login route: /login
-default user email: john@example.com
+<h3> installation</h3>
+<p> composer install</p>
+<p>php artisan migrate:refresh</p>
+<p>php artisan db:seed</p>
+<div>
+login route: /login<br>
+default user email: john@example.com<br>
 password: password123
-
+</div>
